@@ -1,5 +1,5 @@
 RailsWiki::Engine.routes.draw do
-  resources :articles do
+  resources :articles, path: "wiki" do
     member do
       get :versions
     end
