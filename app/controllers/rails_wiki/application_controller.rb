@@ -1,5 +1,2 @@
-module RailsWiki
-  class ApplicationController < ::ApplicationController
-    layout "application"
-  end
+class RailsWiki::ApplicationController < ::ApplicationController
 end
