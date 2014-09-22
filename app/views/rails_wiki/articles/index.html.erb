@@ -1,0 +1,11 @@
+<div class="container">
+  <% @articles.each do |article| %>
+      <% if !article.archived || user_signed_in? %>
+          <div class="panel panel-default">
+            <h3><%= link_to article.pretty_title, article %></h3>
+            <hr>
+            <%= article.text.truncate(30) %>
+          </div>
+      <% end %>
+  <% end %>
+</div>

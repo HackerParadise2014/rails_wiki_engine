@@ -1,3 +1,9 @@
 = RailsWiki
 
 This project rocks and uses MIT-LICENSE.
+
+To get started, this currently depends on a working paper_trail and devise install.
+
+````
+rake rails_wiki:install:migrations
+````

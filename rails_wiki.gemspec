@@ -7,11 +7,11 @@ require "rails_wiki/version"
 Gem::Specification.new do |s|
   s.name        = "rails_wiki"
   s.version     = RailsWiki::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsWiki."
-  s.description = "TODO: Description of RailsWiki."
+  s.authors     = ["Troy Anderson"]
+  s.email       = ["protected"]
+  s.homepage    = "https://github.com/HackerParadise2014/rails_wiki_engine"
+  s.summary     = "Rails Wiki is a simple engine to get you a markdown based wiki."
+  s.description = "Rails Wiki is a simple engine to get you a markdown based wiki."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

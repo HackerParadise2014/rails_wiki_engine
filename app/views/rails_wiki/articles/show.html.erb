@@ -1,0 +1,30 @@
+<% if @versions_available && current_user %>
+    <div class="row">
+      <div class="12-cols pull-right">
+        <%= link_to "Change Log", versions_article_path(@article) %>
+      </div>
+    </div>
+<% end %>
+
+<div class="container">
+  <% if (@article.archived && !user_signed_in?)  %>
+      <div class="alert alert-warning">This is an archived article. You must sign-in to continue.</div>
+  <% elsif @article.persisted? %>
+      <h1>
+        <%= @article.title %>
+      </h1>
+      <%= link_to "Edit", edit_article_path %>
+      <small>
+        <%= if @article.protected
+              "Article is Protected"
+            end %>
+      </small>
+
+      <hr>
+
+      <%= @markdown_body.html_safe %>
+
+  <% else %>
+      <%= render 'rails_wiki/articles/new_form' %>
+  <% end %>
+</div>

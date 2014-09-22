@@ -1,0 +1,17 @@
+<h1>Edit</h1>
+<% if user_signed_in? || :protected != true %>
+    <%= simple_form_for @article do |f| %>
+        <%= f.input :title %>
+
+        <%= f.input :text, input_html: {style: "width: 800px; height: 500px;"} %>
+
+        <% if user_signed_in? %>
+            <p>
+              <%= f.check_box :protected %> Protected
+            </p>
+        <% end %>
+        <p>
+          <%= f.button :submit, class: 'btn btn-success' %>
+        </p>
+    <% end %>
+<% end %>

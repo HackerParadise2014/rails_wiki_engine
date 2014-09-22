@@ -1,0 +1,17 @@
+<%= simple_form_for @article, url: articles_path do |f| %>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <%= f.input :text, input_html: {style: "width: 800px; height: 500px;"} %>
+
+    <% if user_signed_in? %>
+        <p>
+          <%= f.check_box :protected %> Protected
+        </p>
+    <% end %>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
