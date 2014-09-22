@@ -32,7 +32,7 @@
                   <% history.changeset.each_with_index do |change,index| %>
                       <%= change[0] %>
                       <% if change[0] == 'text' %>
-                          <%= Differ.diff_by_word(change[1][1], change[1][0]).to_s.html_safe %>
+                          <% Differ.diff_by_word(change[1][1].to_s, change[1][0].to_s).to_s.html_safe %>
                       <% else %>
                           <b><%= change[0] %></b> <%= change[1][0] %> to <%= change[1][1] %>
                       <% end %>
