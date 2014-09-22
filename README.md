@@ -16,6 +16,6 @@ Want to get to your articles from the host rails app?
 
 Want to link to those articles?
 
-```ruby
+````
 <%= link_to article.pretty_title, rails_wiki.article_path(article) %>
-```
+````
