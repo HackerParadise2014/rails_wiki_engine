@@ -14,6 +14,12 @@ module RailsWiki
    def show
      @article = Article.friendly.find(params[:id])
      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+
+     @article.text.gsub!(/\[(?<link>\w[\w\s]+)\]\s/) do
+       link = Regexp.last_match[:link]
+       "[#{link}](/wiki/#{link.parameterize})"
+     end
+
      @markdown_body = markdown.render(@article.text || '')
      @versions_available = true if @article.versions.count > 1
 
