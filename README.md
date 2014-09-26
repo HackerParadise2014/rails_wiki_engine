@@ -20,6 +20,18 @@ Then run:
 rake rails_wiki:install:migrations
 ```
 
+Then you can run the migrations
+
+```ruby
+rake db:migrate
+```
+And mount the engine, it will add the route /wiki/ to whatever path you use, so might as well mount to / like:
+
+```ruby
+  mount RailsWiki::Engine, at: "/"
+```
+
+
 ### Examples
 
 Want to get to your articles from the host rails app?
