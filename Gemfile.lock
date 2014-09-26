@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails_wiki (0.0.1)
+    rails_wiki (0.0.2)
       devise
       paper_trail (~> 3.0.5)
       rails (~> 4.1.6)
